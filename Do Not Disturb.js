@@ -31,7 +31,6 @@ let statusDnD = '';
 upLoadPanelButton(); 
 
 function updateStatus(dndEvent) {
-  console.log('dndEvent', dndEvent)
   if (dndEvent === 'Active') {
     statusDnD = 'Active';
     xapi.Command.UserInterface.Extensions.Panel.Update({ Name: TEXT_DND_ON, PanelId: PANEL_ID, IconId: ICON_ID_RED, ICON: 'Custom'});
@@ -44,7 +43,6 @@ function updateStatus(dndEvent) {
 
 xapi.Event.UserInterface.Extensions.Panel.Clicked.on(panel => {
   if (panel.PanelId === PANEL_ID) {
-    console.log('panel_id', panel.PanelId);
     if (statusDnD === 'Active') {
       xapi.Command.Conference.DoNotDisturb.Deactivate();
     } else {
