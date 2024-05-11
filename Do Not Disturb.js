@@ -12,7 +12,7 @@ for more details see: https://github.com/vtjoeh
 
 import xapi from 'xapi';
 
-const PANEL_ORDER = 1; // Lower number means the DND button 
+const PANEL_ORDER = 1; // Lower number means the DND button appears first on the touchpanel ahead of other custom buttons.  Built-in buttons appear ahead of all custom buttons. 
 
 const TEXT_DND_ON = 'Do Not Disturb: On'; // Text shown under icon when DND turned on
 
